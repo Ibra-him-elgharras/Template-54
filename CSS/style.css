@@ -14,6 +14,7 @@ html,body{
     position: relative;
     height: 65px;
     width: 250px;
+    overflow: hidden;
     background: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -26,7 +27,6 @@ html,body{
     left: 0;
     height: 100%;
     width: 100%;
-    background: gray;
     border-radius: 4px;
     color: #74ff21;
     font-size: 23px;
@@ -34,5 +34,31 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transition: all 0.4s linear;
+}
+.content:hover::before{
+    left: -250px;
+}
+.content .social-media{
+    position: absolute;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s ease-in-out;
+}
+.content:hover .social-media{
+    right: 0;
+}
+.social-media i{
+    font-size: 22px;
+    color: #74ff21;
+    transition: all 0.4s linear;
+}
+.social-media i:hover{
+    transform: scale(1.1);
 }
