@@ -4,3 +4,35 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+html,body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #74ff21;
+}
+.content{
+    position: relative;
+    height: 65px;
+    width: 250px;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.36);
+}
+.content::before{
+    content: "share";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: gray;
+    border-radius: 4px;
+    color: #74ff21;
+    font-size: 23px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
